@@ -5,9 +5,7 @@ var modulePath = path.resolve(appRootPath, 'vendor');
 var wallabyWebpack = require('wallaby-webpack');
 var babel = require('babel-core');
 var buildConstants = require('./app/constants/build_constants');
-/*for(var j=0;j<Object.keys(buildConstants).length;j++){
-  buildConstants[Object.keys(buildConstants)[j]] = "'"+buildConstants[Object.keys(buildConstants)[j]]+"'";
-}*/
+
 var wallabyPostprocessor = wallabyWebpack({
     plugins: [
       new webpack.DefinePlugin(buildConstants),
